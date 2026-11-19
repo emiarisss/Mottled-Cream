@@ -1,0 +1,71 @@
+/* admin.css — estilos del panel de estadísticas (se usa junto con estilos.css) */
+
+.panel-controles { display: flex; flex-wrap: wrap; gap: 1rem; align-items: end; margin: 1.5rem 0 2rem; }
+.panel-controles input { width: 130px; }
+
+/* Indicadores: tarjetas con marco doble, icono y color propio */
+.indicadores { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; margin-bottom: 1rem; }
+.indicador { --acento: var(--salvia); position: relative; display: flex; align-items: center; gap: 1rem; padding: 1.3rem 1.4rem; background: var(--blanco-calido); border: 2px solid var(--acento); outline: 1px solid var(--acento); outline-offset: 4px; transition: transform 0.3s; }
+.indicador::after { content: "✦"; position: absolute; top: 0.35rem; right: 0.6rem; font-size: 0.8rem; color: var(--acento); }
+.indicador:hover { transform: translateY(-4px); }
+.indicador:nth-child(2) { --acento: var(--miel); }
+.indicador:nth-child(3) { --acento: var(--frambuesa); }
+.indicador:nth-child(4) { --acento: var(--petroleo); }
+.indicador:nth-child(5) { --acento: var(--moca); }
+.indicador.alerta { --acento: var(--terracota); }
+.indicador-icono { flex-shrink: 0; display: grid; place-items: center; width: 58px; height: 58px; color: var(--acento); background: var(--crema); background: color-mix(in srgb, var(--acento) 16%, white); border: 2px dashed var(--acento); border-radius: 50%; }
+.indicador p { margin: 0; font-family: var(--fuente-interfaz); font-size: 0.9rem; color: var(--moca); }
+.indicador strong { display: block; font-family: var(--fuente-titulos); font-size: 2.2rem; line-height: 1.1; }
+
+/* Paneles */
+.panel { padding: 1.4rem; background: var(--blanco-calido); border: 2px solid var(--beige); outline: 1px dashed var(--beige); outline-offset: 4px; }
+.panel h2 { font-size: 1.25rem; margin-bottom: 1rem; }
+.panel-ancho { margin-top: 1.8rem; }
+.panel-alerta { border-color: var(--terracota); outline-color: var(--terracota); }
+
+/* Tortas */
+.tortas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; }
+.grafico-circular { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
+.torta { width: 190px; height: 190px; margin-top: 0.5rem; border-radius: 50%; box-shadow: 0 0 0 6px var(--crema), 0 0 0 7px var(--beige); flex-shrink: 0; }
+.leyenda { list-style: none; margin: 0; padding: 0; width: 100%; font-family: var(--fuente-interfaz); font-size: 0.9rem; }
+.leyenda li { display: grid; grid-template-columns: 14px 1fr auto 52px; gap: 0.6rem; align-items: center; padding: 0.45rem 0; border-bottom: 1px dotted var(--beige); }
+.color-leyenda { width: 14px; height: 14px; border-radius: 3px; }
+.leyenda-porcentaje { padding: 0.05rem 0.4rem; text-align: center; font-size: 0.8rem; font-weight: 600; background: var(--crema); border-radius: 20px; }
+
+/* Barras */
+.barra-fila { display: grid; grid-template-columns: 140px 1fr 34px; gap: 0.8rem; align-items: center; margin-bottom: 0.5rem; font-family: var(--fuente-interfaz); font-size: 0.9rem; }
+.barra-fondo { height: 16px; background: var(--crema); }
+.barra { width: 0; height: 100%; background: var(--tono); transition: width 0.9s ease-out; }
+.barra-fila strong { text-align: right; }
+
+/* Tablas estilo hoja de cálculo */
+.tabla-contenedor { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-family: var(--fuente-interfaz); font-size: 0.92rem; }
+th, td { padding: 0.6rem 0.8rem; text-align: left; border: 1px solid var(--linea); }
+thead th { color: var(--crema); font-weight: 600; background: var(--petroleo); }
+.panel-alerta thead th { background: var(--terracota-oscuro); }
+tbody tr:nth-child(even) { background: var(--crema); }
+tbody tr { transition: background 0.2s; }
+tbody tr:hover { background: #F6E7C8; }
+tfoot td { color: var(--crema); font-weight: bold; background: var(--cafe-oscuro); }
+.numero { text-align: right; }
+
+.chip { display: inline-block; padding: 0.1rem 0.6rem; font-size: 0.8rem; font-weight: 600; color: #fff; border-radius: 20px; }
+.chip-normal { background: var(--salvia); }
+.chip-bajo { background: var(--terracota-oscuro); }
+.chip-agotado { background: var(--moca); }
+.chip-categoria { display: inline-block; padding: 0.1rem 0.7rem; font-size: 0.8rem; font-weight: 600; color: var(--tono-texto); background: var(--tono-suave); border: 1px solid var(--tono); border-radius: 20px; }
+
+/* Medidor de existencias (tabla de stock bajo) */
+.medidor { max-width: 180px; height: 10px; margin-bottom: 0.2rem; background: var(--crema); border: 1px solid var(--beige); }
+.medidor-barra { height: 100%; background: var(--terracota); }
+.medidor-texto { font-size: 0.8rem; color: var(--moca); }
+
+@media (max-width: 900px) {
+  .indicadores { grid-template-columns: repeat(2, 1fr); }
+  .tortas { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .indicadores { grid-template-columns: 1fr; }
+  .barra-fila { grid-template-columns: 100px 1fr 30px; }
+}

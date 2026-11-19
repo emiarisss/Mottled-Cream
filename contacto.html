@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto | Mottled Cream</title>
+  <meta name="description" content="Escríbenos para consultas, pedidos o sugerencias.">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+  <header class="encabezado">
+    <div class="contenedor encabezado-interior">
+
+      <a class="marca" href="index.html">
+        <img class="marca-logo" src="/img/logo.svg" alt="" width="48" height="48">
+        <span class="marca-nombre">Mottled Cream</span>
+      </a>
+      <button type="button" id="boton-menu" class="boton-menu" aria-expanded="false" aria-controls="menu-principal">Menú</button>
+      <nav id="menu-principal" class="menu" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Catálogo</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html" aria-current="page">Contacto</a>
+        <a href="faq.html">Preguntas</a>
+        <a href="carrito.html" class="enlace-carrito">Carrito (<span id="contador-carrito">0</span>)</a>
+        <a href="dashboard.html" class="enlace-candado" aria-label="Acceso para propietarios" title="Acceso para propietarios"><svg class="icono" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span class="candado-texto">Propietarios</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="contenedor seccion dos-columnas contacto">
+    <div>
+      <h1 class="titulo-seccion"><span class="etiqueta" aria-hidden="true">Escríbenos</span>Contacto</h1>
+      <p class="introduccion">Escríbenos si tienes una consulta, quieres hacer un pedido o tienes una sugerencia.</p>
+      <form id="formulario-contacto" novalidate>
+        <div class="campo">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" autocomplete="name">
+          <p class="error" id="error-nombre" role="alert"></p>
+        </div>
+        <div class="campo">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" autocomplete="email">
+          <p class="error" id="error-correo" role="alert"></p>
+        </div>
+        <div class="campo">
+          <label for="telefono">Número de teléfono</label>
+          <input type="tel" id="telefono" name="telefono" autocomplete="tel">
+          <p class="error" id="error-telefono" role="alert"></p>
+        </div>
+        <div class="campo">
+          <label for="asunto">Asunto</label>
+          <input type="text" id="asunto" name="asunto" >
+          <p class="error" id="error-asunto" role="alert"></p>
+        </div>
+        <div class="campo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+          <p class="error" id="error-mensaje" role="alert"></p>
+        </div>
+        <button type="submit" class="boton">Enviar mensaje</button>
+        <p id="confirmacion" class="confirmacion" role="status" hidden></p>
+      </form>
+    </div>
+    <div class="columna-datos">
+      <aside class="datos-contacto">
+      <h2>Datos de contacto</h2>
+   
+      <p><strong>Teléfono:</strong> 73245689</p>
+      <p><strong>Correo:</strong> mottledcream@gmail.com</p>
+      <p><strong>Horario:</strong> Atendemos desde las 10:00 hasta las 20:30</p>
+    </aside>
+      <section class="direccion" aria-labelledby="titulo-direccion">
+        <div class="direccion-toldo" aria-hidden="true"></div>
+        <div class="direccion-cuerpo">
+          <svg class="direccion-icono" viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          <h2 id="titulo-direccion">Nuestra dirección</h2>
+          <address>
+            <p><span>Calle y número</span>Murguía, Presidente Montes y La Plata #127</p>
+            <p><span>Zona o barrio</span>Parque Bolivar</p>
+            <p><span>Ciudad</span>Oruro</p>
+           <div class="direccion-imagen">
+             <img src="/img/ubicación.svg" alt="Ubicación de Mottled Cream">
+             <p>Encuéntranos fácilmente y visítanos.</p>
+           </div>
+          </address>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie-interior">
+      <div>
+        <h2>Mottled Cream</h2>
+        <p>Cafetería, panadería y repostería artesanal.</p>
+      </div>
+      <div>
+        <h2>Contacto</h2>
+        <p>Teléfono: 52-33106 </p>
+        <p>Correo: mottledcream@gmail.com</p>
+      </div>
+      <div>
+        <h2>Enlaces</h2>
+        <ul class="pie-enlaces">
+          <li><a href="productos.html">Catálogo</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="faq.html">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Síguenos</h2>
+        <ul class="pie-enlaces redes">
+          <li><a href="https://www.tiktok.com/@mottledcream?_r=1&_t=ZS-9BWLU7Tmm4C" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="https://www.instagram.com/mottledcream/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.pinterest.com/" target="_blank" rel="noopener">Pinterest</a></li>
+          <li><a href="https://www.whatsapp.com/" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="pie-derechos">© Mottled Cream. Proyecto académico.</p>
+  </footer>
+  <script src="js/app.js"></script>
+  <script src="js/contacto.js"></script>
+</body>
+</html>
