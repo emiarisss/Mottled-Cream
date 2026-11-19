@@ -60,7 +60,7 @@
    "categoria": "Repostería", 
    "stock": 3,
    "imagen": "img/productos/tiramisu.png", 
-   "destacado": true},
+   "destacado": false},
 
   {"id": 8, 
    "nombre": "Waffles", 
@@ -78,7 +78,7 @@
    "categoria": "Repostería", 
    "stock": 18, 
    "imagen": "img/productos/cupcake.png", 
-   "destacado": true},
+   "destacado": false},
 
   {"id": 10,  
    "nombre": "Brazo gitano", 
